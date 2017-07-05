@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace coreShop.Controllers
 {
-    public class HomeController : Controller
+    public class TweetController : Controller
     {
-        readonly IStoreRepository _storeRepository;
+        readonly ITweetRepository _tweetRepository;
 
-        public HomeController(IStoreRepository storeRepository)
+        public TweetController(ITweetRepository tweetRepository)
         {
-            _storeRepository = storeRepository;
+            _tweetRepository = tweetRepository;
         }
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View(_storeRepository.Tweets);
+            return View(_tweetRepository.Tweets);
         }
     }
 }
