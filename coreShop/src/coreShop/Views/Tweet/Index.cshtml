@@ -1,14 +1,8 @@
 ﻿@model IEnumerable<coreShop.Models.Tweet>
-<html>
-<body>
+@foreach (var i in Model)
+{
     <div>
-        @foreach (var i in Model)
-        {
-            <div>
-                <h1>@i.Id</h1>
-                <p>@i.Message<p>
-        </div>
-        }
+        <h1>@i.Id</h1>
+        <p>@i.Message<p>
     </div>
-</body>
-</html>
+}
